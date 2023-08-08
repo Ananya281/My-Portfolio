@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/c4254e24a8.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="mylogo.png" alt="logo" class="logo">
+                <ul id="sidemenu">
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <i class="fas fa-times" onclick="closemenu()"></i>
+                </ul>
+                <i class="fas fa-bars" onclick="openmenu()"></i>
+            </nav>
+            <div class="headertext">
+                <p>Code Enthusiast</p>
+                <h1>Hi, I'm <span>Ananya</span><br>Chauhan</h1>
+            </div>
+        </div>
+    </div>
+    <!-- -about- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="aboutcol1">
+                    <img src="Just me.jpg">
+                </div>
+                <div class="aboutcol2">
+                    <h1 class="subtitle">About Me</h1>
+                    <p> Student at Thapar Institute of Engineering and Technology pursuing BTECH in Computer Engineering. I am resident of Haridwar. I am looking forward to learn more about Web Development.</p>
+                    <div class="tabtitles">
+                        <p class="tablinks active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tablinks" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tabcontents active-tab" id="skills">
+                        <ul>
+                            <li><span>Programming Language</span><br>C, C++, Python</li>
+                            <li><span>Web Development</span><br>HTML, CSS, JavaScript</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- portfolio  -->
+    <div id="portfolio">
+        <div class="container">
+            <h1 class="subtitle">Projects</h1>
+            <div class="worklist">
+                <div class="work">
+                    <img src="snake.jpg">
+                    <div class="layer">
+                        <h3>Snake Water Gun Game</h3>
+                        <p>This is Snake-Water-Gun game developed in Python language.I have used the concepts such as randomisation, conditional statements and functions in this program.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="bootstrap.jpg">
+                    <div class="layer">
+                        <h3>iCoder Website</h3>
+                        <p>This is our Bootstrap Website</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+                <div class="work">
+                    <img src="game.jpg">
+                    <div class="layer">
+                        <h3>TicTacToe Game</h3>
+                        <p>This is Tic Tac Toe which is a simple yet strategic game using python.</p>
+                        <a href="#"><i class="fas fa-external-link-alt"></i></a>
+                    </div>
+                </div>
+            </div>
+            <a href="#" class="btn">See More</a>
+        </div>
+    </div>
+    <!---------contact--------->
+    <div id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="contactleft">
+                    <h1 class="subtitle">Contact Me</h1>
+                    <p><i class="fas fa-paper-plane"></i>ananyachauhan647@gmail.com</p>
+                    <div class="socialicons">
+                        <a href="https://www.linkedin.com/in/ananya-chauhan-b89378251/"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/Ananya281"><i class="fab fa-github"></i></a>
+                        <a href="https://www.instagram.com/ananyachauhan2801/"><i class="fab fa-instagram"></i></a>
+                    </div>
+                    <a href="Resume.pdf" download class="btn btn2">Download Resume</a>
+                </div>
+                <div class="contactright">
+                    <form>
+                        <input type="text" name="Name" placeholder="Your Name" required>
+                        <input type="email" placeholder="Your Email" required>
+                        <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                        <button type="submit" class="btn btn2">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>Copyright © Made by Ananya Chauhan</p>
+        </div>
+    </div>
+    <script>
+        var tablinks=document.getElementsByClassName("tablinks");
+        var tabcontents=document.getElementsByClassName("tabcontents");
+        function opentab(tabname)
+        {
+            for(tablink of tablinks)
+            {
+                tablink.classlist.remove("active-link");
+            }
+            for(tabcontent of tabcontents)
+            {
+                tabcontent.classlist.remove("active-tab");
+            }
+            event.currentTarget.classlist.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+        }
+    </script>
+    <script>
+        var sidemen=document.getElementById("sidemenu");
+        function openmenu(){
+            sidemen.style.right="0"
+        }
+        function closemenu(){
+            sidemen.style.right="-200px"
+        }
+    </script>
+</body>
+</html>
