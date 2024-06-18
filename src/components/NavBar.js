@@ -48,8 +48,8 @@ export const NavBar = () => {
           <span className="navbar-text">
             <div className="social-icon">
               <a href="https://www.linkedin.com/in/ananya-chauhan-b89378251/"><FaLinkedinIn className="icon"/></a>
-              <a href="#"><SiGithub className="icon" /></a>
-              <a href="#"><SiLeetcode className="icon" /></a>
+              <a href="https://github.com/Ananya281"><SiGithub className="icon" /></a>
+              <a href="https://leetcode.com/u/ananyachauhan2801/"><SiLeetcode className="icon" /></a>
             </div>
             <a href={Resume} target="_blank" rel="noopener noreferrer">
               <button className="vvd"><span>Resume</span></button>
