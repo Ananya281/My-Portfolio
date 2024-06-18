@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
-import { HashLink } from 'react-router-hash-link';
 import { FaLinkedinIn } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
 import { SiLeetcode } from "react-icons/si";
+import Resume from "../assets/Resume.pdf";
 
 export const NavBar = () => {
 
@@ -12,9 +12,12 @@ export const NavBar = () => {
 
   useEffect(() => {
     const onScroll = () => {
-      if (window.scrollY > 50) {
+      if (window.scrollY > 50) 
+      {
         setScrolled(true);
-      } else {
+      } 
+      else 
+      {
         setScrolled(false);
       }
     }
@@ -48,9 +51,9 @@ export const NavBar = () => {
               <a href="#"><SiGithub className="icon" /></a>
               <a href="#"><SiLeetcode className="icon" /></a>
             </div>
-            <HashLink to='#connect'>
-                <button className="vvd"><span>Resume</span></button>
-              </HashLink>
+            <a href={Resume} target="_blank" rel="noopener noreferrer">
+              <button className="vvd"><span>Resume</span></button>
+            </a>
           </span>
         </Navbar.Collapse>
       </Container>
