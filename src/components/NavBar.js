@@ -3,7 +3,7 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import { FaLinkedinIn } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
 import { SiLeetcode } from "react-icons/si";
-import Resume from "../assets/Resume.pdf";
+import Resume from "../assets/Ananya.pdf";
 
 export const NavBar = () => {
 
