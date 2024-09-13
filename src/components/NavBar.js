@@ -3,7 +3,7 @@ import { Navbar, Nav, Container } from "react-bootstrap";
 import { FaLinkedinIn } from "react-icons/fa";
 import { SiGithub } from "react-icons/si";
 import { SiLeetcode } from "react-icons/si";
-import Resume from "../assets/Ananya.pdf";
+import Resume from "../assets/Resume - Ananya.pdf";
 
 export const NavBar = () => {
 
@@ -49,7 +49,7 @@ export const NavBar = () => {
             <div className="social-icon">
               <a href="https://www.linkedin.com/in/ananya-chauhan-b89378251/ " target="_blank"><FaLinkedinIn className="icon"/></a>
               <a href="https://github.com/Ananya281" target="_blank"><SiGithub className="icon" /></a>
-              <a href="https://leetcode.com/u/ananyachauhan2801/" target="_blank"><SiLeetcode className="icon" /></a>
+              <a href="https://leetcode.com/u/Ananya2801/" target="_blank"><SiLeetcode className="icon" /></a>
             </div>
             <a href={Resume} target="_blank" rel="noopener noreferrer">
               <button className="vvd"><span>Resume</span></button>
