@@ -4,10 +4,7 @@ import {Container, Row, Col} from "react-bootstrap"
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import './TextSphere';
-import TagCloud from "TagCloud";
 import TrackVisibility from 'react-on-screen';
-import {motion} from 'framer-motion';
-import { styles } from "../styles";
 import TextSphere from "./TextSphere";
 import 'animate.css';
 

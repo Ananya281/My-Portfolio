@@ -29,8 +29,11 @@ const TextSphere = () => {
                 keep: true,
             };
 
-            TagCloud(container, texts, options);
-        }
+ // Initialize TagCloud
+ const tagCloud = TagCloud(container, texts, options);
+
+ // Cleanup to avoid memory leaks
+ return () => tagCloud.destroy();        }
     },[]);
 
     return(
