@@ -1,48 +1,61 @@
-import React, {useEffect} from "react";
-import "./styles/TextSphere.css"; 
+import React, { useEffect } from "react";
+import "./styles/TextSphere.css";
 
-//Importing TagCloud package
+// Importing TagCloud package
 import TagCloud from "TagCloud";
 
 const TextSphere = () => {
-    useEffect(()=>{
-        return()=>{
-            const container = ".tagcloud";
-            const texts = [
-                "HTML",
-                "CSS",
-                "JavaScript",
-                "React",
-                "MongoDB",
-                "NodeJS",
-                "Flask",
-                "SQL",
-                "Python",
-                "GIT",
-                "GITHUB",
-            ];
+  useEffect(() => {
+    const container = ".tagcloud";
 
-            const options = {
-                radius: 300,
-                maxspeed: "normal",
-                initSpeed: "normal",
-                keep: true,
-            };
+    // Array of technologies
+    const texts = [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "ReactJS",
+      "MongoDB",
+      "NodeJS",
+      "Python",
+      "ExpressJS",
+      "Git",
+      "GitHub",
+      "C++",
+      "C",
+      "Docker",
+      "Figma",
+      "Framer Motion",
+      "Netlify",
+      "Heroku",
+      "Redux",
+      "Scikit-learn",
+      "TailwindCSS",
+      "TensorFlow",
+      "ThreeJS",
+      "TypeScript",
+      "Vite",
+    ];
 
- // Initialize TagCloud
- const tagCloud = TagCloud(container, texts, options);
+    // TagCloud options
+    const options = {
+      radius: 250,
+      maxSpeed: "fast",
+      initSpeed: "fast",
+      keep: true,
+    };
 
- // Cleanup to avoid memory leaks
- return () => tagCloud.destroy();        }
-    },[]);
+    // Initialize TagCloud
+    const tagCloud = TagCloud(container, texts, options);
 
-    return(
-        <div>
-            <div className="text-sphere">
-                <span className="tagcloud"></span>
-            </div>
-        </div>
-    );
+    // Cleanup to avoid memory leaks
+    return () => tagCloud.destroy();
+  }, []);
+
+  return (
+    <div className="text-sphere">
+      <span className="tagcloud"></span>
+    </div>
+  );
 };
 
 export default TextSphere;

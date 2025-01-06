@@ -1,5 +1,4 @@
 import React from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import { NavBar } from "./components/NavBar";
 import { Banner } from "./components/Banner";
@@ -12,31 +11,20 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function App() {
   return (
-    <BrowserRouter>
-      <NavBar />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Banner />
-              <About />
-              <Tech />
-              <Work />
-            </>
-          }
-        />
-        <Route
-          path="/contact"
-          element={
-            <>
-              <Contact />
-              <StarsCanvas />
-            </>
-          }
-        />
-      </Routes>
-    </BrowserRouter>
+    <div className="App">
+
+    <NavBar />
+    <Banner />
+    <About/>
+    <Tech/>
+    <Work/>
+    <div className='relative z-0'>
+    <Contact/>
+    <StarsCanvas/>
+    </div>
+    {/* <World/> */}
+  </div>
+    
   );
 }
 
