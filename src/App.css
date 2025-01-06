@@ -276,7 +276,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
   nav.navbar .navbar-toggler {
     margin-right: 5px; /* Remove right margin */
-    padding: 5px 10px 5px 10px; /* Ensure no padding around the toggler */
+    padding: 4px 16px 5px 10px; /* Ensure no padding around the toggler */
   }
 
   nav.navbar .navbar-toggler-icon {
@@ -289,7 +289,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 
   nav.navbar .navbar-nav .nav-link.navbar-link {
-    padding: 4px 15px; /* Increase vertical padding for spacing */
+    padding: 4px px; /* Increase vertical padding for spacing */
     font-size: 14px; /* Smaller font size for nav links */
     margin: 5px 0; /* Add margin between links */
   }
@@ -331,7 +331,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   }
 }
 
-
 /************ Banner Css ************/
 .banner {
   margin-top: 0;
@@ -366,12 +365,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   line-height: 1; /* Adjusted line-height for better spacing */
   margin-top: 20px; /* Increased margin above heading for better alignment */
   margin-bottom: 10px;
+  margin-left: 12px;
   display: block;
 }
 
 .banner p {
   color: #B8B8B8;
-  font-size: 18px;
+  font-size: 15px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
   width: 90%;
@@ -418,6 +418,37 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .txt-rotate > .wrap {
   border-right: 0.08em solid #666;
 }
+
+@media (max-width: 768px) {
+  .banner {
+    text-align: center; /* Center-align all text within the banner */
+  }
+  .banner h1 {
+    font-size: 55px; /* Reduced font size for the heading */
+    line-height: 1.2; /* Adjusted line height for better readability */
+  }
+
+  .banner .tagline {
+    font-size: 14px; /* Reduced font size for the tagline */
+    display: block;
+    margin: 0 auto; 
+    margin-top: 200px;
+  }
+
+  .banner p {
+    font-size: 20px; /* Reduced font size for paragraph text */
+  }
+
+  .banner button {
+    font-size: 16px; /* Slightly smaller button text */
+    padding: 10px 45px; /* Adjusted padding for smaller buttons */
+  }
+
+  .txt-rotate .wrap {
+    font-size: 18px; /* Adjust rotating text size */
+  }
+}
+
 
 /* Scroll Button Styling */
 .scroll-button {
@@ -471,7 +502,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   font-size: 14px;
   margin-top: 10px;
 }
-
 
 /*work css*/
 .invert-black {

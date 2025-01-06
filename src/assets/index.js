@@ -32,8 +32,14 @@ import weather from "./weather.png";
 import money from "./money.png";
 import jobit from "./jobit.png";
 import tripguide from "./tripguide.png";
+import MovieMate from "./MovieMate.png";
+import ExploreBharat from "./ExploreBharat.png";
+import PhotoGenius from "./PhotoGenius.png";
 
 export {
+  MovieMate,
+  ExploreBharat,
+  PhotoGenius,
   backend,
   creator,
   mobile,

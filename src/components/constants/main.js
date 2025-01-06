@@ -12,12 +12,15 @@ import {
     mongodb,
     git,
     figma,
-    docker,
+    MovieMate,
+    ExploreBharat,
+    PhotoGenius,
     threejs,
-    synopsizer,
-    weather,
-    money,
   } from "../../assets"; // Keep only the imports needed from "../../assets"
+  // import MovieMate from "../../assets"
+  // import ExploreBharat from "../../assets"
+  // import PhotoGenius from "../../assets"
+
   
   import c from "../../assets/tech/c.webp";
   import express from "../../assets/tech/express.webp";
@@ -121,16 +124,16 @@ import {
   
   const projects = [
     {
-      name: "Synopsizer",
+      name: "MovieMate",
       description:
-        "Synopsizer is a web development project that uses AI to summarize long articles into concise, readable formats, streamlining the process of understanding complex texts.",
+        "Designed a movie recommendation system with content-based and popularity-based algorithms.",
       tags: [
         {
-          name: "react",
+          name: "react.js",
           color: "blue-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "nlp",
           color: "green-text-gradient",
         },
         {
@@ -138,53 +141,53 @@ import {
           color: "pink-text-gradient",
         },
       ],
-      image: synopsizer,
-      source_code_link: "https://github.com/Ananya281/Synopsizer",
-      website_code_link: "https://synopsizer.vercel.app/",
+      image: MovieMate,
+      source_code_link: "https://github.com/Ananya281/MovieMate",
+      website_code_link: "https://moviemate-4.onrender.com/",
     },
     {
-      name: "Weather App",
+      name: "ExploreBharat",
       description:
-        "A weather app providing real-time forecasts and weather conditions, offering users detailed insights for planning activities and travel.",
+        "Developed a cultural heritage exploration platform featuring interactive maps and AI-powered image recognition.",
       tags: [
         {
-          name: "html",
+          name: "react.js",
           color: "blue-text-gradient",
         },
         {
-          name: "css",
+          name: "flask",
           color: "green-text-gradient",
         },
         {
-          name: "js",
+          name: "deep learning(DL)",
           color: "pink-text-gradient",
         },
       ],
-      image: weather,
-      source_code_link: "https://github.com/Ananya281/Weather-App",
-      website_code_link: "https://weather-app-seven-zeta-16.vercel.app/",
+      image: ExploreBharat,
+      source_code_link: "https://github.com/Ananya281/Explore-Bharat",
+      website_code_link: "https://explore-bharat-frontend.vercel.app/",
     },
     {
-      name: "Money Tracker App",
+      name: "PhotoGenius",
       description:
-        "A money tracker app that helps users monitor their spending and manage budgets effectively, ensuring better financial control and savings.",
+        "PhotoGenius is a web app for quick image editing, built with Flask and OpenCV. It supports format conversion, resizing, cropping, and advanced filters.",
       tags: [
         {
-          name: "js",
+          name: "python",
           color: "blue-text-gradient",
         },
         {
-          name: "nodejs",
+          name: "flask",
           color: "green-text-gradient",
         },
         {
-          name: "mongodb",
+          name: "opencv",
           color: "pink-text-gradient",
         },
       ],
-      image: money,
-      source_code_link: "https://github.com/Ananya281/Money-Tracker-App",
-      website_code_link: "https://money-tracker-app-one.vercel.app/",
+      image: PhotoGenius,
+      source_code_link: "https://github.com/Ananya281/PhotoGenius",
+      website_code_link: "https://photogenius-1.onrender.com/",
     },
   ];
   
