@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { HashLink } from "react-router-hash-link";
 import { Container, Row, Col } from "react-bootstrap";
 import { ArrowRightCircle } from "react-bootstrap-icons";
+import spaceVideo from "../assets/video/space.mp4"; // Import video from assets folder
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -44,6 +45,14 @@ export const Banner = () => {
 
   return (
     <section className="banner py-5" id="home">
+      {/* Video Background */}
+      <video autoPlay loop muted playsInline className="video-background">
+        <source src={spaceVideo} type="video/mp4" />
+        Your browser does not support the video tag.
+      </video>
+      {/* Black Overlay */}
+      <div className="overlay"></div>
+
       <Container>
         <Row className="align-items-center">
           <Col xs={12} md={6} xl={7} className="text-center text-md-start">
@@ -60,6 +69,10 @@ export const Banner = () => {
                   <span className="wrap">{text}</span>
                 </span>
               </h1>
+              <p className="mt-4 text-white opacity-80">
+                I specialize in building user-focused, scalable, and efficient solutions. 
+                With expertise in frontend technologies, AI/ML integration, and UI/UX design, I aim to bridge technology with creativity to solve real-world challenges.
+              </p>
               <HashLink smooth to="#contacts" className="text-decoration-none">
                 <button className="connect-button mt-4">
                   Let’s Connect <ArrowRightCircle size={25} />

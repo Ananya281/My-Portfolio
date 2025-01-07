@@ -16,14 +16,21 @@
 }
 
 /************ Default Css ************/
-* {
+html,body {
   margin: 0;
   padding: 0;
+  overflow-x: hidden;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   scroll-behavior: smooth;
   color-scheme: dark;
 }
+
+.App {
+  width: 100%;
+  overflow-x: hidden;
+}
+
 
 .hash-span {
   margin-top: -100px;
@@ -121,8 +128,8 @@ span.navbar-text {
 }
 
 .social-icon a {
-  width: 36px;
-  height: 36px;
+  width: 48px;
+  height: 48px;
   background: rgba(217, 217, 217, 0.1);
   display: inline-flex;
   border-radius: 50%;
@@ -168,7 +175,7 @@ span.navbar-text {
   color: #fff;
   border: 1px solid #fff;
   padding: 12px 24px; /* Adjusted padding for mobile */
-  font-size: 16px;
+  font-size: 18px;
   margin-left: 10px;
   position: relative;
   background-color: transparent;
@@ -336,11 +343,62 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin-top: 0;
   padding: 200px 0 100px 0;
   height: 100vh;
-  background-image: url('./assets/img/space.jpg');
-  background-position: top center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
 }
+
+.video-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  z-index: -1;
+}
+
+
+.text-white {
+  color: #fff;
+}
+
+.opacity-80 {
+  opacity: 0.8;
+}
+
+.star {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: white;
+  border-radius: 50%;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  pointer-events: none;
+  animation: fadeOut 1.5s ease-out;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: scale(1);
+  }
+  to {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+}
+
+
 
 .banner .tagline {
   font-weight: 700;
@@ -349,32 +407,34 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   background: linear-gradient(90.21deg, rgba(170, 54, 124, 0.5) -5.91%, rgba(74, 47, 189, 0.5) 111.58%);
   border: 1px solid rgba(255, 255, 255, 0.5);
   font-size: 20px;
-  margin-top: 200px;
+  margin-top: 140px;
   margin-bottom: 8px; /* Increased spacing below tagline for better visibility */
   display: inline-block;
   z-index: 2; /* Ensure tagline stays on top of any overlapping elements */
   text-align: center; 
   width: fit-content; 
-  margin-left: 12px;
+  margin-left: 15px;
 }
 
 .banner h1 {
-  font-size: 65px;
+  font-size: 60px;
   font-weight: 700;
   letter-spacing: 0.8px;
   line-height: 1; /* Adjusted line-height for better spacing */
   margin-top: 20px; /* Increased margin above heading for better alignment */
   margin-bottom: 10px;
-  margin-left: 12px;
+  margin-left: 15px;
   display: block;
 }
 
 .banner p {
-  color: #B8B8B8;
-  font-size: 15px;
+  color: #ffffff;   
+  font-size: 20px;
   letter-spacing: 0.8px;
   line-height: 1.5em;
+  margin-left: 15px;
   width: 90%;
+  /* text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); Adds shadow for better readability */
 }
 
 .banner button {
@@ -385,7 +445,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.8px;
   display: flex;
   align-items: center;
-  margin-left: 12px;
+  margin-left: 15px;
 }
 
 .banner button svg {
@@ -424,28 +484,30 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
     text-align: center; /* Center-align all text within the banner */
   }
   .banner h1 {
-    font-size: 55px; /* Reduced font size for the heading */
+    font-size: 40px; /* Reduced font size for the heading */
     line-height: 1.2; /* Adjusted line height for better readability */
   }
 
   .banner .tagline {
-    font-size: 14px; /* Reduced font size for the tagline */
+    font-size: 15px; /* Reduced font size for the tagline */
     display: block;
     margin: 0 auto; 
-    margin-top: 200px;
+    margin-top: 150px;
   }
 
   .banner p {
-    font-size: 20px; /* Reduced font size for paragraph text */
+    font-size: 14px; /* Reduced font size for paragraph text */
+    margin: 0 auto; 
   }
 
   .banner button {
     font-size: 16px; /* Slightly smaller button text */
     padding: 10px 45px; /* Adjusted padding for smaller buttons */
+    margin: 0 auto; 
   }
 
   .txt-rotate .wrap {
-    font-size: 18px; /* Adjust rotating text size */
+    font-size: 24px; /* Adjust rotating text size */
   }
 }
 
@@ -459,7 +521,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 
 .scroll-indicator {
   cursor: pointer;
-  margin-top: 50px;
+  margin-top: 35px;
 }
 
 .mouse {
@@ -500,15 +562,13 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 .scroll-indicator p {
   color: white;
   font-size: 14px;
-  margin-top: 10px;
+  margin-top: 8px;
 }
 
 /*work css*/
 .invert-black {
   filter: invert(100%);
 }
-
-
 
 
 /************ Footer Css ************/
@@ -589,8 +649,6 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   letter-spacing: 0.5px;
   margin-top: 20px;
 }
-
-
 
 
 
@@ -790,4 +848,92 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   width: 100%;
   height: 100%;
   position: relative;
+}
+
+
+
+/* Loader Styles */
+.loading-page {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #000; /* Black background */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-x: hidden;
+  z-index: 1000;
+}
+
+.counter {
+  text-align: center;
+}
+
+.counter h1 {
+  font-family: "Nova Flat", sans-serif;
+  color: #fff;
+  font-size: 5vw; /* Adjust font size for responsiveness */
+  margin: 0;
+}
+
+.counter hr {
+  margin-top: 10px;
+  width: 0%;
+  height: 5px;
+  background-color: #fff;
+  border: none;
+  transition: width 0.1s ease;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 1024px) {
+  .counter h1 {
+    font-size: 8rem; /* Adjust for tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .counter h1 {
+    font-size: 6rem; /* Adjust for smaller tablets */
+  }
+
+  .counter hr {
+    height: 4px; /* Reduce bar height */
+  }
+}
+
+@media (max-width: 480px) {
+  .counter h1 {
+    font-size: 4rem; /* Adjust for mobile devices */
+  }
+
+  .counter hr {
+    height: 3px; /* Reduce bar height further */
+  }
+}
+
+
+/* Fade-in animation for main content */
+.fade-in-content {
+  animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
