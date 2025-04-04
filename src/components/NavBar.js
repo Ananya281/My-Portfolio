@@ -89,7 +89,7 @@ export const NavBar = () => {
                 <SiLeetcode className="icon" />
               </a>
             </div>
-            <a href={Resume} target="_blank" rel="noopener noreferrer">
+            <a href="https://drive.google.com/file/d/1sCrE05mP7494PhRRVT57Zmd5KTF1PnY6/view?usp=sharing" target="_blank" rel="noopener noreferrer">
               <button className="vvd">
                 <span>Resume</span>
               </button>
